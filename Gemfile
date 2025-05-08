@@ -1,7 +1,11 @@
 source "https://rubygems.org"
 
+gem "bootstrap"
+gem "html2slim", github: "slim-template/html2slim"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2", ">= 7.2.2.1"
+gem "sassc-rails"
+gem "slim-rails"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 # Use postgresql as the database for Active Record
