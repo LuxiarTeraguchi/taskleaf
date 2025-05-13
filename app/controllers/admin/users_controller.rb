@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :require_admin
-  before_action :find_user, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_user, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @users = User.all
@@ -49,7 +49,7 @@ class Admin::UsersController < ApplicationController
     redirect_to root_url unless current_user.admin?
   end
 
-  def find_user
+  def set_user
     @user = User.find(params[:id])
   end
 end
